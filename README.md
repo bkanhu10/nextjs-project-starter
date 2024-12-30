@@ -20,7 +20,6 @@ cd nextjs-project-starter
 **2. Install Dependencies:**
 
 ```bash
-Copy code
 npm install
 # or
 yarn install
@@ -33,7 +32,6 @@ bun install
 **3. Run the Development Server:**
 
 ```bash
-Copy code
 npm run dev
 # or
 yarn dev
@@ -46,3 +44,75 @@ bun dev
 **4. View the Application:**
 
 Open your browser and navigate to `http://localhost:3000` to see the application in action.
+
+## Project Structure
+
+```lua
+.project-root
+├── .github
+│   └── workflows
+│       └── ci.yml
+├── .husky
+├── .vscode
+├── node_modules
+├── public
+│   └── favicon.ico
+├── src
+│   ├── app
+│   │   ├── globals.css
+│   │   ├── layout.jsx
+│   │   └── page.jsx
+│   ├── components
+│   │   ├── Layout
+│   │   │   ├── Footer.jsx
+│   │   │   └── Navbar.jsx
+│   │   └── Screen
+│   │       └── .gitkeep
+│   ├── lib
+│   │   ├── api.js
+│   │   └── utils.js
+│   └── utils
+│       ├── dateUtils.js
+│       ├── numberUtils.js
+│       └── stringUtils.js
+├── .eslintrc.json
+├── .eslintignore
+├── .gitignore
+├── .huskyrc
+├── .lintstagedrc
+├── .prettierrc
+├── components.json
+├── jsconfig.json
+├── next.config.js
+├── package-lock.json
+├── package.json
+└── postcss.config.js
+```
+
+**GitHub Actions:**
+
+- `.github/workflows/ci.yml` for CI/CD pipeline setup.
+  **Husky Integration:**
+- `.husky` for managing pre-commit hooks.
+
+**Next.js App Directory:**
+
+- `src/app` for global CSS, layout, and routing.
+- Modularized components under `src/components`.
+
+**Reusable Utilities:**
+
+- `src/utils` for helper functions (e.g., dateUtils.js, stringUtils.js).
+
+**API Layer:**
+
+- `src/lib/api.js` for centralizing API calls.
+
+**Configuration Files:**
+
+- `.eslintrc.json`, `.prettierrc`, and `.lintstagedrc` for maintaining code quality.
+- `next.config.js` for Next.js-specific configuration.
+
+**Styling:**
+
+- `postcss.config.js` for PostCSS setup, which often works with Tailwind CSS.
