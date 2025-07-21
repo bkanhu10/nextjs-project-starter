@@ -5,5 +5,11 @@ public
 node_modules
 next-env.d.ts
 next.config.ts
+next.config.js
+next.config.mjs
 yarn.lock
 .github
+.prettierrc
+components.json
+postcss.config.mjs
+.vscode
