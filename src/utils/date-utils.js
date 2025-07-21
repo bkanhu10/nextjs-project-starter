@@ -1,4 +1,4 @@
-// Function to format date to a readable string
+// Format date to a readable string
 export const formatDate = (
   date,
   options = { year: "numeric", month: "long", day: "numeric" }
@@ -6,7 +6,7 @@ export const formatDate = (
   return new Date(date).toLocaleDateString(undefined, options);
 };
 
-// Function to format time to a readable string
+// Format time to a readable string
 export const formatTime = (
   date,
   options = { hour: "2-digit", minute: "2-digit" }
@@ -14,7 +14,7 @@ export const formatTime = (
   return new Date(date).toLocaleTimeString(undefined, options);
 };
 
-// Function to get time difference between two dates
+// Get time difference between two dates
 export const timeDifference = (date1, date2) => {
   const diff = Math.abs(new Date(date1) - new Date(date2));
   const minutes = Math.floor(diff / (1000 * 60));
@@ -23,3 +23,19 @@ export const timeDifference = (date1, date2) => {
 
   return { days, hours, minutes };
 };
+
+// Format date time
+export const formatDateTimeToLocale = (
+  utcDateString,
+  locale = "en-IN",
+  options = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  }
+) => {
+  const date = new Date(utcDateString);
+  return date.toLocaleString(locale, options);
+}; // Example usage: // formatDateToLocale("2024-08-24T14:30:00Z"); // "8/24/2024, 2:30:00 PM"

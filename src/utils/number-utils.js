@@ -1,9 +1,9 @@
-// Function to format a number with commas as thousands separators
+// Format a number with commas as thousands separators
 export const formatNumber = (num) => {
   return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };
 
-// Function to convert a number to a currency format
+// Convert a number to a currency format
 export const formatCurrency = (amount, currency = "INR", locale = "en-IN") => {
   return new Intl.NumberFormat(locale, {
     style: "currency",
@@ -11,12 +11,12 @@ export const formatCurrency = (amount, currency = "INR", locale = "en-IN") => {
   }).format(amount);
 };
 
-// Function to convert a number to a percentage format
+// Convert a number to a percentage format
 export const formatPercentage = (num) => {
   return `${(num * 100).toFixed(2)}%`;
 };
 
-// Function to style a number in percentage format
+// Style a number in percentage format
 export const stylePercentage = (num) => {
   return `${num.toFixed(2)}%`;
 };
